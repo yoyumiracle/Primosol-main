@@ -1,0 +1,21 @@
+.leaderboardTable {
+  .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .body {
+    .row {
+      &:nth-child(odd) {
+        background-color: #111214;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.holdingTable {
+  .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(100px,1fr) minmax(88px,1fr) minmax(88px,1fr) minmax(88px,1fr) minmax(120px,1fr) 120px;
+    align-items: center;
+  }
+
+  .body {
+    .row {
+      &:nth-child(odd) {
+        background-color: #111214;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .holdingTable {
+    .row {
+      grid-template-columns: minmax(100px,1fr) minmax(88px,1fr) minmax(88px,1fr) minmax(88px,1fr) 100px;
+
+      > div:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .holdingTable {
+    .row {
+      grid-template-columns: minmax(100px,1fr) minmax(88px,1fr) minmax(88px,1fr) 80px;
+
+      > div:nth-child(2),
+      > div:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+}

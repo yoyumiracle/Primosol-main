@@ -1,0 +1,21 @@
+.marquee-container {
+  cursor: pointer;
+  
+  .marquee-bar {
+    animation-play-state: running;
+  }
+
+  &:hover {
+    .marquee-bar {
+      animation-play-state: paused;
+    }
+  }
+}
+
+iframe {
+  width: 100%
+}
+
+.trade-row:nth-child(odd) {
+  background: #16181C80;
+}

@@ -1,0 +1,21 @@
+.orderTable {
+  .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px minmax(90px,  0.4fr) minmax(90px, 100px) minmax(90px, 0.6fr) minmax(114px, 0.6fr) minmax(126px, 0.6fr) minmax(100px, 0.6fr) minmax(60px, 80px) minmax(50px, 70px) minmax(50px, 70px) minmax(132px, 1fr) 58px;
+    align-items: center;
+  }
+
+  .body {
+    .row {
+      &:nth-child(odd) {
+        background-color: #111214;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+      }
+    }
+  }
+}
